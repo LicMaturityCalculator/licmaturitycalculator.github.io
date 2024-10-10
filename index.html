@@ -8,7 +8,7 @@
     <style>/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light gray background */
     color: #333;
     margin: 0;
     padding: 20px;
@@ -16,7 +16,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: #0044cc; /* Blue color for the heading */
     margin-bottom: 20px;
 }
 
@@ -37,25 +37,25 @@ label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
-    color: #34495e;
+    color: #0044cc; /* Blue color for labels */
 }
 
 input[type="number"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffcc00; /* Yellow border for inputs */
     border-radius: 4px;
     font-size: 16px;
 }
 
 input[type="number"]:focus {
-    border-color: #3498db;
+    border-color: #0044cc; /* Blue border on focus */
     outline: none;
 }
 
 button {
     width: 100%;
-    background-color: #3498db;
+    background-color: #0044cc; /* Blue button */
     color: #fff;
     border: none;
     padding: 15px;
@@ -66,7 +66,8 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #ffcc00; /* Yellow background on hover */
+    color: #0044cc; /* Blue text on hover */
 }
 
 /* Result Styling */
@@ -75,7 +76,7 @@ button:hover {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #27ae60;
+    color: #0044cc; /* Blue color for result text */
 }
 
 /* Responsive Design */
@@ -98,13 +99,58 @@ button:hover {
         font-size: 24px;
     }
 }
+
+/* Styling for the navigation bar */
+.custom-navbar {
+    background-color: #00008B; /* Blue background */
+    padding: 10px;
+    margin-top: 0px;  /* Adds space above the nav */
+    margin-bottom: 40px;  /* Adds space below the nav */
+    border-radius: 8px; /* Adds rounded corners */
+}
+
+/* Styling for the brand (logo and text) */
+.custom-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #FFEA00; /* Yellow text for the brand */
+    text-decoration: none;
+}
+
+/* Styling for the brand text */
+.brand-text {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00; /* Yellow text */
+}
+
+/* Add hover effect for the brand */
+.custom-navbar .navbar-brand:hover {
+    color: #fff; /* White text on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .brand-text {
+        font-size: 18px; /* Slightly smaller text on mobile */
+    }
+
+    .custom-navbar {
+        padding: 10px; /* Less padding on mobile */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
 </style>
   </head>
   <body>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light custom-navbar">
   <a class="navbar-brand" href="#">
     <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Lic Maturity Calculator
+    <span class="brand-text">LIC Maturity Calculator</span>
   </a>
 </nav>
     <div class="calculator">
@@ -252,5 +298,29 @@ function calculateMaturity() {
     document.getElementById('result').innerText = `Maturity Amount: ₹${maturityAmount.toFixed(2)}`;
 }
 </script>
+<footer class="bg-body-tertiary text-center text-lg-start">
+  <!-- Links Section -->
+  <div class="p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+      <li style="display: inline-block; margin: 0 15px;">
+        <a href="/about-us" class="text-body">About Us</a>
+      </li>
+      <li style="display: inline-block; margin: 0 15px;">
+        <a href="/contact-us" class="text-body">Contact Us</a>
+      </li>
+      <li style="display: inline-block; margin: 0 15px;">
+        <a href="/privacy-policy" class="text-body">Privacy Policy</a>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-body" href="https://licmaturitycalculator.com/">licmaturitycalculator.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
   </body>
 </html>
